@@ -1,0 +1,18 @@
+# Directories
+/.assets/
+/.autoconverted/
+/.godot/
+/addons/
+/Components/
+/Resources/
+/Scenes/
+
+# Files
+default_bus_layout.tres
+export_presets.cfg
+project.godot
+
+icon.png*
+icon.ico*
+icon.svg*
+cursor.png*
