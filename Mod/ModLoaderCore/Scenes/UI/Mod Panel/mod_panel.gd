@@ -30,6 +30,9 @@ func _on_visibility_changed() -> void:
 
 func update() -> void:
 	var mod: Mod = get_node("/root/ModLoader").mod_manager.get_mod(id)
+	if mod == null:
+		display_name.text = id
+		return
 	icon.texture = mod.icon()
 	display_name.text = mod.display_name()
 	version.text = mod.version()

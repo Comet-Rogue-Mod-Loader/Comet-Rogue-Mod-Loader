@@ -1,9 +1,10 @@
 extends Control
 
-var start_game_on_close: bool = false
+@export var pages: Array[Control]
 
 @onready var page: Control = % "Page"
 @onready var ok_button: CustomButton = % "Ok Button"
+
 signal closed
 
 
@@ -20,10 +21,6 @@ func create_mod_panels() -> void:
 		var panel := panel_scene.instantiate()
 		panel.id = mod.id()
 		if mod.id() == "mod_loader": panel.can_toggle = false
-		page.add_child.call_deferred(panel)
-	for i in range(20):
-		var panel := panel_scene.instantiate()
-		panel.id = "test_%s" % [i]
 		page.add_child.call_deferred(panel)
 
 

@@ -1,0 +1,88 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmwgb6x0satb6"]
+
+[ext_resource type="PackedScene" path="res://Scenes/UI/UI Background/ui_background.tscn" id="1_ktfxg"]
+[ext_resource type="Script" path="res://Mod/ModLoaderCore/Scenes/UI/Config Menu Popup/config_menu_popup.gd" id="1_wexck"]
+[ext_resource type="PackedScene" uid="uid://d3835hl1lxulh" path="res://Scenes/UI/Custom Button/custom_button.tscn" id="2_ptbsb"]
+[ext_resource type="Theme" uid="uid://bqf2gsve7yl3i" path="res://Resources/Themes/default.tres" id="3_m7dyx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2oqxi"]
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Config Menu Popup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wexck")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -43.0
+offset_top = -37.0
+offset_right = 494.0
+offset_bottom = 287.0
+color = Color(0, 0, 0, 0.721)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 6
+
+[node name="UI Background" parent="MarginContainer" instance=ExtResource("1_ktfxg")]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/UI Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/UI Background/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="MarginContainer/UI Background/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_m7dyx")
+text = "asdf"
+label_settings = SubResource("LabelSettings_2oqxi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/UI Background/MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="Config Content" type="VBoxContainer" parent="MarginContainer/UI Background/MarginContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="Ok Button" parent="." instance=ExtResource("2_ptbsb")]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 215.0
+offset_right = 280.0
+offset_bottom = 237.0
+grow_horizontal = 2
+grow_vertical = 0
+message = "Ok"
