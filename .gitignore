@@ -6,6 +6,8 @@
 /Components/
 /Resources/
 /Scenes/
+/Mod Loader/
+ModLoaderCore/
 
 # Files
 default_bus_layout.tres
