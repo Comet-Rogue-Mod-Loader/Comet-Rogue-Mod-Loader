@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ModConfig" load_steps=5 format=3 uid="uid://b4nu6rg5aovqa"]
+[gd_resource type="Resource" script_class="ModConfig" load_steps=5 format=3 uid="uid://csua5ildqymav"]
 
 [ext_resource type="Script" path="res://Mod Loader/Mod/Mod Config/Items/mod_config_item.gd" id="1_4fhpk"]
 [ext_resource type="Script" path="res://Mod Loader/Mod/Mod Config/Items/mod_config_bool.gd" id="2_2ktmu"]

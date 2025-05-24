@@ -1,13 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpytdmhk6gwoo"]
+[gd_scene load_steps=3 format=3 uid="uid://cehho6a43etpm"]
 
 [ext_resource type="Script" path="res://Mod Loader/Mod/Mod Config/Items/mod_config_bool_node.gd" id="1_53iix"]
-[ext_resource type="PackedScene" uid="uid://d3835hl1lxulh" path="res://Scenes/UI/Custom Button/custom_button.tscn" id="1_v7vvc"]
+[ext_resource type="PackedScene" uid="uid://bfc3jtw20v36q" path="res://Scenes/UI/Custom Button/custom_button.tscn" id="1_v7vvc"]
 
-[node name="ModConfigBoolNode" type="HBoxContainer"]
-offset_right = 31.0
-offset_bottom = 16.0
+[node name="CustomButton" instance=ExtResource("1_v7vvc")]
 script = ExtResource("1_53iix")
-
-[node name="Button" parent="." instance=ExtResource("1_v7vvc")]
-unique_name_in_owner = true
-layout_mode = 2

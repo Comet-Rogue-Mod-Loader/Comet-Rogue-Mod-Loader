@@ -11,7 +11,10 @@ func version() -> String: return ""
 func icon() -> Texture2D: return load(get_script().resource_path.trim_suffix("mod.gd") + "icon.png")
 func credit() -> String: return ""
 
-func default_config() -> ModConfig: return load(get_script().resource_path.trim_suffix("mod.gd") + "config.tres")
+func default_config() -> ModConfig: 
+	var config: ModConfig = load(get_script().resource_path.trim_suffix("mod.gd") + "config.tres")
+	config.mod = self
+	return config
 
 func dependencies() -> Array[String]: return []
 func known_conflicts() -> Array[String]: return []

@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0lcd8853veng"]
-
-[ext_resource type="Script" path="res://Mod/ModLoaderCore/mod.gd" id="1_eaek6"]
-
-[node name="Mod" type="Node"]
-script = ExtResource("1_eaek6")

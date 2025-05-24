@@ -36,5 +36,6 @@ func load_mods() -> void:
 			print("No mod.gd in %s" % dir)
 			continue
 		var mod: Mod = load("res://Mod/%s/mod.gd" % dir).new()
+		mod.config = mod.default_config()
 		mod.name = mod.id()
 		mod_manager.add_child.call_deferred(mod)

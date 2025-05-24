@@ -1,0 +1,77 @@
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://ffk8rws01ke5"]
+
+[ext_resource type="Texture2D" uid="uid://cae8h84lvyvrg" path="res://Resources/Themes/slider grabber.png" id="1_nja8g"]
+[ext_resource type="Texture2D" uid="uid://b1snmkhlrwt0l" path="res://Resources/Themes/slider grabber highlight.png" id="2_ul1ff"]
+[ext_resource type="FontFile" uid="uid://cctvrhxiatsm5" path="res://Resources/Fonts/PixelOperator-Bold.ttf" id="3_l7nu1"]
+[ext_resource type="Texture2D" uid="uid://c6xs35yjxae38" path="res://Mod/ModLoaderCore/Resources/Themes/slider_grabber.png" id="4_455xy"]
+[ext_resource type="Texture2D" uid="uid://swnael38yu2o" path="res://Mod/ModLoaderCore/Resources/Themes/slider_grabber_highlight.png" id="5_oonl7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bduj"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oi4wc"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebm3r"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3r58l"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ak8if"]
+size = Vector2(0, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3nm2w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u5781"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4oya"]
+bg_color = Color(0.211765, 0.192157, 0.176471, 1)
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
+[resource]
+default_base_scale = 0.84
+HSlider/icons/grabber = ExtResource("1_nja8g")
+HSlider/icons/grabber_highlight = ExtResource("2_ul1ff")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_3bduj")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_oi4wc")
+HSlider/styles/slider = SubResource("StyleBoxFlat_ebm3r")
+Label/constants/outline_size = 3
+Label/fonts/font = ExtResource("3_l7nu1")
+LinkButton/colors/font_focus_color = Color(0.160784, 0.678431, 1, 1)
+LinkButton/colors/font_hover_color = Color(0.160784, 0.678431, 1, 1)
+LinkButton/constants/outline_size = 3
+LinkButton/fonts/font = ExtResource("3_l7nu1")
+LinkButton/styles/focus = SubResource("StyleBoxEmpty_3r58l")
+RichTextLabel/constants/outline_size = 3
+RichTextLabel/fonts/normal_font = ExtResource("3_l7nu1")
+VSlider/constants/center_grabber = 0
+VSlider/constants/grabber_offset = 0
+VSlider/icons/grabber = ExtResource("4_455xy")
+VSlider/icons/grabber_disabled = ExtResource("4_455xy")
+VSlider/icons/grabber_highlight = ExtResource("5_oonl7")
+VSlider/icons/tick = SubResource("PlaceholderTexture2D_ak8if")
+VSlider/styles/grabber_area = SubResource("StyleBoxEmpty_3nm2w")
+VSlider/styles/grabber_area_highlight = SubResource("StyleBoxEmpty_u5781")
+VSlider/styles/slider = SubResource("StyleBoxFlat_s4oya")
