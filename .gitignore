@@ -8,11 +8,15 @@
 /Scenes/
 
 # Files
-default_bus_layout.tres
-export_presets.cfg
-project.godot
+/default_bus_layout.tres
+/export_presets.cfg
+/project.godot
 
-icon.png*
-icon.ico*
-icon.svg*
-cursor.png*
+/icon*
+/cursor*
+
+# Contributer Mods
+Mod/ItemPooler/*
+Mod/ExampleMod/icon.png
+Mod/ExampleMod/icon.png.import
+Mod/ExampleMod/mod.gd

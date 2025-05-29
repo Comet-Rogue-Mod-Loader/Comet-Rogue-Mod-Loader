@@ -11,6 +11,7 @@ func _ready() -> void:
 		func():
 			visible = false
 	)
+	get_node("/root/ModLoader").update_config.connect(update_config)
 
 func update_config() -> void:
 	for child in content.get_children():
@@ -21,6 +22,8 @@ func update_config() -> void:
 		var scene := item.scene()
 		if scene == null: continue
 		var instance: Node = scene.instantiate()
+		if "default_value" in item:
+			item.set_value(item.default_value)
 		instance.item = item
 		content.add_child(instance)
 

@@ -1,6 +1,9 @@
 class_name SceneInjector
 extends Node
 
+func instance() -> SceneInjector:
+	return get_node("/root/ModLoader").scene_injector
+
 func on_scene_changed(node: Node, path: String) -> void:
 	var scene_path: String = path.trim_prefix("res://")
 	

@@ -1,6 +1,9 @@
 class_name ModManager
 extends Node
 
+func instance() -> ModManager:
+	return get_node("/root/ModLoader").mod_manager
+
 func has_mod(id: String) -> bool:
 	return get_mod(id) != null
 

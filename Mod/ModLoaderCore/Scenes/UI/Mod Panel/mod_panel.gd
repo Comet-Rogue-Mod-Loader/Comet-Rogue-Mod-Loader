@@ -6,10 +6,12 @@ extends Control
 var config_menu: Control
 
 @onready var icon: TextureRect = % "Icon"
+@onready var info: Container = % "Info"
 @onready var display_name: Label = % "DisplayName"
 @onready var version: Label = % "Version"
 @onready var description: Label = % "Description"
 @onready var credit_control: Control = % "CreditControl"
+@onready var credit_label: RichTextLabel = % "CreditLabel"
 
 @onready var toggle_button: CustomButton = % "Toggle"
 @onready var config_button: CustomButton = % "Config"
@@ -26,9 +28,23 @@ func _ready() -> void:
 			config_menu.visible = true
 	)
 	visibility_changed.connect(_on_visibility_changed)
+	
+	info.mouse_entered.connect(
+		func():
+			credit_control.visible = true
+	)
+	info.mouse_exited.connect(
+		func():
+			credit_control.visible = false
+	)
+	credit_control.visible = false
 
 func _on_visibility_changed() -> void:
 	if visible: update()
+
+func _process(_delta: float) -> void:
+	if !visible: return
+	credit_control.position = get_local_mouse_position()
 
 func update() -> void:
 	var mod: Mod = get_node("/root/ModLoader").mod_manager.get_mod(id)
@@ -42,6 +58,7 @@ func update() -> void:
 	display_name.text = mod.display_name()
 	version.text = mod.version()
 	description.text = mod.description()
+	credit_label.text = "[wave]%s[/wave]" % mod.credit()
 	
 	toggle_button.disabled = !can_toggle
 	

@@ -24,10 +24,6 @@ func create_mod_panels() -> void:
 		if mod.id() == "mod_loader": panel.can_toggle = false
 		page.add_child.call_deferred(panel)
 		panel.config_menu = config_menu
-	for i in range(20):
-		var panel := panel_scene.instantiate()
-		panel.id = "test_%s" % [i]
-		page.add_child.call_deferred(panel)
 
 
 func _on_ok_button_pressed() -> void:

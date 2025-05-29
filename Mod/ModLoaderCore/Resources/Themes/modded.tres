@@ -1,10 +1,67 @@
-[gd_resource type="Theme" load_steps=14 format=3 uid="uid://ffk8rws01ke5"]
+[gd_resource type="Theme" load_steps=24 format=3 uid="uid://ffk8rws01ke5"]
 
 [ext_resource type="Texture2D" uid="uid://cae8h84lvyvrg" path="res://Resources/Themes/slider grabber.png" id="1_nja8g"]
 [ext_resource type="Texture2D" uid="uid://b1snmkhlrwt0l" path="res://Resources/Themes/slider grabber highlight.png" id="2_ul1ff"]
 [ext_resource type="FontFile" uid="uid://cctvrhxiatsm5" path="res://Resources/Fonts/PixelOperator-Bold.ttf" id="3_l7nu1"]
 [ext_resource type="Texture2D" uid="uid://c6xs35yjxae38" path="res://Mod/ModLoaderCore/Resources/Themes/slider_grabber.png" id="4_455xy"]
 [ext_resource type="Texture2D" uid="uid://swnael38yu2o" path="res://Mod/ModLoaderCore/Resources/Themes/slider_grabber_highlight.png" id="5_oonl7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q1xpb"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_51bgx"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yfs5q"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bfjxm"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_injw6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="FontVariation" id="FontVariation_2rafe"]
+base_font = ExtResource("3_l7nu1")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mtvgb"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_diiyx"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v2ngf"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8xe7y"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bduj"]
 border_width_left = 1
@@ -52,6 +109,54 @@ expand_margin_right = 4.0
 
 [resource]
 default_base_scale = 0.84
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("3_l7nu1")
+Button/styles/disabled = SubResource("StyleBoxEmpty_q1xpb")
+Button/styles/focus = SubResource("StyleBoxEmpty_51bgx")
+Button/styles/hover = SubResource("StyleBoxEmpty_yfs5q")
+Button/styles/normal = SubResource("StyleBoxEmpty_bfjxm")
+Button/styles/pressed = SubResource("StyleBoxEmpty_injw6")
+FlatButton/base_type = &"Button"
+FlatButton/colors/font_color = Color(1, 1, 1, 1)
+FlatButton/colors/font_disabled_color = Color(1, 1, 1, 1)
+FlatButton/colors/font_focus_color = Color(1, 1, 1, 1)
+FlatButton/colors/font_hover_color = Color(1, 1, 1, 1)
+FlatButton/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+FlatButton/colors/font_outline_color = Color(0, 0, 0, 1)
+FlatButton/colors/font_pressed_color = Color(1, 1, 1, 1)
+FlatButton/colors/icon_disabled_color = Color(0, 0, 0, 1)
+FlatButton/colors/icon_focus_color = Color(0, 0, 0, 1)
+FlatButton/colors/icon_hover_color = Color(0, 0, 0, 1)
+FlatButton/colors/icon_normal_color = Color(0, 0, 0, 1)
+FlatButton/colors/icon_pressed_color = Color(0, 0, 0, 1)
+FlatButton/constants/align_to_largest_stylebox = 0
+FlatButton/constants/h_separation = 0
+FlatButton/constants/icon_max_width = 0
+FlatButton/constants/outline_size = 1
+FlatButton/font_sizes/font_size = 16
+FlatButton/fonts/font = SubResource("FontVariation_2rafe")
+FlatButton/icons/icon = null
+FlatButton/styles/disabled = SubResource("StyleBoxEmpty_mtvgb")
+FlatButton/styles/hover = SubResource("StyleBoxEmpty_diiyx")
+FlatButton/styles/normal = SubResource("StyleBoxEmpty_v2ngf")
+FlatButton/styles/pressed = SubResource("StyleBoxEmpty_8xe7y")
 HSlider/icons/grabber = ExtResource("1_nja8g")
 HSlider/icons/grabber_highlight = ExtResource("2_ul1ff")
 HSlider/styles/grabber_area = SubResource("StyleBoxFlat_3bduj")

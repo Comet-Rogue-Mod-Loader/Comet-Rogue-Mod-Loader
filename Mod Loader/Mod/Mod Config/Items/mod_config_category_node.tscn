@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=3 uid="uid://cpqnj7skmj6nj"]
+
+[ext_resource type="Script" path="res://Mod Loader/Mod/Mod Config/Items/mod_config_category_node.gd" id="1_256ad"]
+[ext_resource type="Script" path="res://Mod/ModLoaderCore/Scenes/UI/custom_button_category.gd" id="2_520s8"]
+[ext_resource type="AudioStream" uid="uid://bww7s7kduy73w" path="res://Scenes/UI/Custom Button/press sound.wav" id="3_feh4c"]
+[ext_resource type="AudioStream" uid="uid://bycl4x1helxe6" path="res://Scenes/UI/Custom Button/release sound.wav" id="4_2xqcr"]
+[ext_resource type="AudioStream" uid="uid://cvdm6kgt4v1ns" path="res://Scenes/UI/Custom Button/focus sound.wav" id="5_coego"]
+[ext_resource type="AudioStream" uid="uid://dx33wpw5o81m2" path="res://Scenes/UI/Custom Button/unfocus sound.wav" id="6_byl7r"]
+[ext_resource type="Script" path="res://Components/Utility/Audio/CustomAudioPlayer/CustomAudioPlayer.gd" id="7_vh0ab"]
+[ext_resource type="Theme" uid="uid://jf0sft8av5am" path="res://Resources/Themes/default.tres" id="8_mnybr"]
+[ext_resource type="Script" path="res://Components/UI/CorrectSpacingLabel/CorrectSpacingLabel.gd" id="9_ti8ia"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4au56"]
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b5qbn"]
+bg_color = Color(0.211765, 0.192157, 0.176471, 1)
+expand_margin_right = 1.0
+
+[node name="ModConfigCategoryNode" type="VBoxContainer"]
+custom_minimum_size = Vector2(292, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_256ad")
+
+[node name="Button" type="TextureButton" parent="." groups=["custom button", "custom ui element"]]
+unique_name_in_owner = true
+texture_filter = 1
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+script = ExtResource("2_520s8")
+press_sound = ExtResource("3_feh4c")
+release_sound = ExtResource("4_2xqcr")
+focus_sound = ExtResource("5_coego")
+unfocus_sound = ExtResource("6_byl7r")
+
+[node name="CustomAudioPlayer" type="Node" parent="Button"]
+script = ExtResource("7_vh0ab")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonIcon" type="TextureRect" parent="Button/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Button/HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("8_mnybr")
+text = "asdf"
+label_settings = SubResource("LabelSettings_4au56")
+vertical_alignment = 1
+script = ExtResource("9_ti8ia")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+clip_contents = true
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_b5qbn")
+
+[node name="Content" type="HFlowContainer" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
+[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]
+[connection signal="focus_entered" from="Button" to="Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Button" to="Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Button" to="Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="Button" method="_on_mouse_exited"]
